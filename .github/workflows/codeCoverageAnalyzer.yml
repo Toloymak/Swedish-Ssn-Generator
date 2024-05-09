@@ -27,7 +27,7 @@ jobs:
       working-directory: src
       
     - name: Test
-      run: dotnet test SSN.Generator.Tests/SSN.Generator.Tests.csproj /p:CollectCoverage=true /p:CoverletOutput=TestResults/ /p:CoverletOutputFormat=lcov
+      run: dotnet test SSN.Generator.Tests/SSN.Generator.Tests.fsproj /p:CollectCoverage=true /p:CoverletOutput=TestResults/ /p:CoverletOutputFormat=lcov
       working-directory: src
       
     - name: Publish coverage report to coveralls.io
