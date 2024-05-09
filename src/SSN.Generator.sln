@@ -10,13 +10,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHubWorkflow", "GitHubWorkflow", "{56D25413-B1C6-4C77-B40C-D50DFC74809C}"
-				ProjectSection(SolutionItems) = preProject
-								..\.github\workflows\codeCoverageAnalyzer.yml = ..\codeCoverageAnalyzer.yml
-					..\GitHubWorkflows\codeCoverageAnalyzer.yml = ..\GitHubWorkflows\codeCoverageAnalyzer.yml
-					..\GitHubWorkflows\nugetPackage.yml = ..\GitHubWorkflows\nugetPackage.yml
-				EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,8 +24,5 @@ Global
 		{A37850A7-8C94-438F-ACAC-1AD479AF2132}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A37850A7-8C94-438F-ACAC-1AD479AF2132}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A37850A7-8C94-438F-ACAC-1AD479AF2132}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{56D25413-B1C6-4C77-B40C-D50DFC74809C} = {70177F1B-A126-4F21-849D-0E1FA309639C}
 	EndGlobalSection
 EndGlobal
