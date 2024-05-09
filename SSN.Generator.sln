@@ -4,6 +4,11 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SSN.Generator", "SSN.Genera
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SSN.Generator.Tests", "SSN.Generator.Tests\SSN.Generator.Tests.fsproj", "{A37850A7-8C94-438F-ACAC-1AD479AF2132}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{70177F1B-A126-4F21-849D-0E1FA309639C}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
