@@ -24,32 +24,37 @@ module SwedishGenerator =
         | Gender.Female -> 0
         | _ -> ArgumentOutOfRangeException() |> raise
         
-    let private controlSum number =
+    let private controlSum (number:string) =
         let mutable multiply = 2
         let mutable total = 0
-        for symbol in number do
-            let digit = Int32.Parse symbol
-            total <- digit * multiply
-            multiply <- if multiply = 1 then 2 else 1
-        ()
         
-    let rec private SumDigit number =
-        let sum =
-            if number >= 10
-                then number % 10 + SumDigit number / 10
-                else number
+        if number.Length <> 11 then raise (ArgumentException($"Number must be 9 digits long, but it was {number.Length} digits long."))
+        
+        let nineDigits = number.[2..]
+        
+        // Skip 2 first digits
+        for symbol in nineDigits do
+            let digit = symbol.ToString() |> Int32.Parse
+            let multiplyResult = digit * multiply
+            total <- total + multiplyResult / 10 + multiplyResult % 10
                 
-        if sum >= 10
-            then SumDigit sum
-            else number
+            multiply <- if multiply = 1 then 2 else 1
+        
+        let latDigitOfTotal =
+            if total >= 10
+            then total % 10
+            else total
+        
+        let controlDigit = if latDigitOfTotal = 0 then 0 else 10 - latDigitOfTotal
+        controlDigit
         
     let private buildDigitArray personInformation : string =
         let birthDatePart = buildDatePart personInformation.BirthDate
         let randomNumberPart = randomNumberPart.ToString()
         let randomGenderPart = (randomGenderPart personInformation.Gender).ToString()
         
-        // TODO: Add control sum logic
-        birthDatePart + randomNumberPart + randomGenderPart
+        let ppid = $"{birthDatePart}{randomNumberPart}{randomGenderPart}"
+        ppid + (controlSum ppid).ToString()
         
     let GenerateSSN personInformation : string =
         buildDigitArray personInformation
