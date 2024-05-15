@@ -28,7 +28,7 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release /p:Version=${VERSION}
       working-directory: src
-    # TODO: RESTORE ME!
+    # TODO: RESTORE ME! 
     # - name: Test
     #   run: dotnet test --configuration Release /p:Version=${VERSION} --no-build
     #   working-directory: src
