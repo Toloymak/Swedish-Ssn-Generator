@@ -3,6 +3,7 @@
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <PackageId>Toloymak.SSN.Generator</PackageId>
         <Version>0.1.0</Version>
         <Authors>Alexey Brovko</Authors>
         <PackageDescription>Generator of SSN numbers. Swedish only but I hope it will be improved</PackageDescription>
