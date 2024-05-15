@@ -37,7 +37,7 @@ jobs:
       run: dotnet pack --configuration Release --no-build --output .
       working-directory: src/SSN.Generator
     - name: Push
-      run: dotnet nuget push Toloymak.SSN.Generator.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_TOKEN}
+      run: dotnet nuget push SSN.Generator.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_TOKEN}
       working-directory: src/SSN.Generator
       env:
         NUGET_TOKEN: ${{ secrets.GITHUB_TOKEN }}
