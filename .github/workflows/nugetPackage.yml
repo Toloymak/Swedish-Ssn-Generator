@@ -27,7 +27,7 @@ jobs:
       run: dotnet restore
       working-directory: src
     - name: Build
-      run: dotnet build --configuration Release /p:Version=${VERSION}
+      run: dotnet build --configuration Release /p:Version=0.1.0
       working-directory: src
     # TODO: RESTORE ME! 
     # - name: Test
